@@ -1,0 +1,12 @@
+{
+  "name": "daijs-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "WEB3_PRIV_KEY=\"3399b0cd5a2271080508559319d3113ac345b825a80f07895796363b7f40e1c2\" node ./src/open-cdp.js"
+  },
+  "dependencies": {
+    "@makerdao/dai": "^0.7.1"
+  }
+}
