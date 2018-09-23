@@ -8,7 +8,7 @@ async function openCDP() {
   const cdp = await maker.openCdp();
   console.log("Created CDP with id: ", await cdp.getId());
 
-  const ethToLock = 0.1;
+  const ethToLock = 0.05;
   console.log(`Locking : ${ethToLock} ETH`);
   await cdp.lockEth(ethToLock);
 
@@ -20,6 +20,10 @@ async function openCDP() {
 
   console.log(`Drawing ${saveToPullDai}`);
   await cdp.drawDai(saveToPullDai);
+
+  console.log(`Wiping ${saveToPullDai}`);
+  await cdp.wipeDai(saveToPullDai, Maker.DAI);
+
 
   console.log(`The current collateralization rate is ${(await cdp.getCollateralizationRatio()).toString()}`);
 }
